@@ -51,19 +51,20 @@ export default function page() {
         try {
           setLoading(true);
           const templateParams = {
-            to_id: id,
-            to_user: currentUser.uid,
-            from_name: '4Elevenfxtrade bonus withdraw',
-            to_name: 'Admin',
-            amount: rewardAmount,
+            from_name: '4Elevenfxtrade',
             reply_to: currentUser.email,
-            user: currentUser.displayName,
             to_email:'amasimarvellous@gmail.com',
+            page_to: 'approveWithdraw/'+id+'__'+currentUser?.uid,
+            type: 'reward withdrawal request',
+            message: `Hi Admin,
+            amount: ${rewardAmount},
+            user: ${currentUser?.displayName}
+            email: ${currentUser?.email}`,
           };
         
           emailjs.send(
             'service_ao75urn',
-            'template_e9ovp6w', 
+            'template_tdpbxb7', 
             templateParams,
             'MIRKY7yUv_4VJdUdi' 
           )
