@@ -107,14 +107,14 @@ export default function page() {
       {eligibleForWithdraw && <div className='grid grid-cols-2 max-sm:grid-cols-1 w-full gap-5'>
         <select className='bg-transparent outline-none text-[#a2a1ab] p-3 border border-[#00eaff13] rounded-lg' name="" id="" value={selectedOption || "Choose withdraw option"} onChange={handleOptionChange}>
        <option value="Choose withdraw option">Choose withdraw option</option>
-          <option value='Option one'>
-           Option one
+          <option value='BTC'>
+           BTC
           </option>
-          <option value='Option two'>
-           Option two
+          <option value='BNB'>
+           BNB
           </option>
-          <option value='Option three'>
-           Option three
+          <option value='USDT'>
+           USDT
           </option>
        </select> 
        <input type="text" onChange={(e)=> setAddress(e.target.value)} placeholder='Enter wallet address' maxLength={32} className='bg-transparent outline-none placeholder:text-[#a2a1ab] p-3 border border-[#00eaff13] rounded-lg'/>
