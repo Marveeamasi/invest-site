@@ -29,20 +29,20 @@ export default function page({params}) {
 
   const templateParamsForAccept = {
     from_name: '4Elevenfxtrade',
-    to_name: selectedData?.user.substring(0,6),
-    reply_to: "amasimarvellous@gmail.com",
-    plan_name: selectedData?.plan,
-    to_email: selectedData?.user,
-    message: `Your withdrawal of ${selectedData?.amount} has been approved, incase you haven't been credited in less than 23 hrs please contact our customer service: 4elevenfxtrade@gmail.com`,
+    reply_to: 'amasimarvellous@gmail.com',
+    to_email: selectedData?.user? selectedData?.user : 'amasimarvellous@gmail.com',
+    page_to: 'dashboard',
+    type: 'notification from 4Elevenfxtrade',
+    message: `Your withdrawal of ${selectedData?.amount} from ${selectedData?.plan} has been approved, incase you haven't been credited in less than 23 hrs please contact our customer service: 4elevenfxtrade@gmail.com`,   
   };
 
   const templateParamsForReject = {
     from_name: '4Elevenfxtrade',
-    to_name: selectedData?.user.substring(0,6),
-    reply_to: "amasimarvellous@gmail.com",
-    plan_name: selectedData?.plan,
-    to_email: selectedData?.user,
-    message: `Your withdrawal of ${selectedData?.amount} failed, please contact our customer service: 4elevenfxtrade@gmail.com`,
+        reply_to: 'amasimarvellous@gmail.com',
+        to_email: selectedData?.user? selectedData?.user : 'amasimarvellous@gmail.com',
+        page_to: 'dashboard',
+        type: 'notification from 4Elevenfxtrade',
+        message: `Your withdrawal of ${selectedData?.amount} from ${selectedData?.plan} failed, please contact our customer service: 4elevenfxtrade@gmail.com`, 
   };
 
   const handleReject = async () => {
@@ -64,11 +64,11 @@ export default function page({params}) {
     try {
       await updateDoc(requestRef, { withdrawals: updatedRequests });
       await emailjs.send(
-        'service_fdte8n3',
-        'template_2b020nd', 
-        templateParamsForReject,
-        'GxMdpSXPSUwGus6Ls' 
-      )
+        'service_ao75urn',
+      'template_tdpbxb7', 
+      templateParamsForReject,
+      'MIRKY7yUv_4VJdUdi' 
+      );
       setLoading(false);
       alert('Withdrawal rejected successfully');
     } catch (error) {
@@ -104,11 +104,11 @@ export default function page({params}) {
       }
       await deleteCurrent(userId, currentId);
       await emailjs.send(
-        'service_fdte8n3',
-        'template_2b020nd', 
-        templateParamsForAccept,
-        'GxMdpSXPSUwGus6Ls' 
-      )
+        'service_ao75urn',
+      'template_tdpbxb7', 
+      templateParamsForReject,
+      'MIRKY7yUv_4VJdUdi' 
+      );
       setLoading(false);
       alert('Withdrawal accepted successfully');
       
