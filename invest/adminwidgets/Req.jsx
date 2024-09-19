@@ -29,19 +29,19 @@ export default function Req({plan, status, amount, date, img , user, userId, id,
 
     const templateParamsForAccept = {
       from_name: '4Elevenfxtrade',
-      to_name: user.substring(0,6),
-      reply_to: "amasimarvellous@gmail.com",
-      plan_name: plan,
-      to_email: user,
+      reply_to: 'amasimarvellous@gmail.com',
+      to_email: user? user : 'amasimarvellous@gmail.com',
+      page_to: 'dashboard',
+    type: 'notification from 4Elevenfxtrade',
       message: `Your payment of ${amount} has been approved successfully, now your money grows weekly`,
     };
   
     const templateParamsForReject = {
       from_name: '4Elevenfxtrade',
-      to_name: user.substring(0,6),
-      reply_to: "amasimarvellous@gmail.com",
-      plan_name: plan,
-      to_email: user,
+      reply_to: 'amasimarvellous@gmail.com',
+      to_email: user? user : 'amasimarvellous@gmail.com',
+      page_to: 'dashboard',
+      type: 'notification from 4Elevenfxtrade',
       message: `Your payment of ${amount} failed, please contact our customer service: 4elevenfxtrade@gmail.com`,
     };
 
@@ -78,11 +78,11 @@ export default function Req({plan, status, amount, date, img , user, userId, id,
     try {
       await updateDoc(requestRef, { requests: updatedRequests });
       await emailjs.send(
-        'service_fdte8n3',
-        'template_2b020nd', 
-        templateParamsForReject,
-        'GxMdpSXPSUwGus6Ls' 
-      )
+        'service_ao75urn',
+      'template_tdpbxb7', 
+      templateParamsForReject,
+      'MIRKY7yUv_4VJdUdi' 
+      );
       setLoading(false);
       alert('Request rejected successfully');
     } catch (error) {
@@ -174,11 +174,11 @@ const handleAccept = async () => {
       })
     });
     await emailjs.send(
-      'service_fdte8n3',
-      'template_2b020nd', 
-      templateParamsForAccept,
-      'GxMdpSXPSUwGus6Ls' 
-    )
+      'service_ao75urn',
+    'template_tdpbxb7', 
+    templateParamsForAccept,
+    'MIRKY7yUv_4VJdUdi' 
+    );
 
     // Save investment to database
     // await sendToDatadb();
