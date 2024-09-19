@@ -29,21 +29,21 @@ export default function scheduleEmails({ initialAmount, userEmail, plan, investm
   let interestRate = 0;
 
   switch (plan) {
-    case 'college':
+    case 'student':
       totalWeeks = 2;
-      interestRate = 0.05;
+      interestRate = 0.10;
       break;
-    case 'workers':
+    case 'worker':
       totalWeeks = 4;
-      interestRate = 0.07;
+      interestRate = 0.12;
       break;
     case 'platinium':
       totalWeeks = 12;
-      interestRate = 0.09;
+      interestRate = 0.15;
       break;
     case 'retirement':
       totalWeeks = 52;
-      interestRate = 0.12;
+      interestRate = 0.20;
       break;
     default:
       totalWeeks = 0;
