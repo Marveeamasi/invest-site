@@ -12,8 +12,8 @@ export default function page() {
   const drwssp = '$$$$$$$$$$$$$$$$'
   const router = useSearchParams();
     const search = router.get('query');
-    const username = search.split("__")[0];
-    const password = search.split("__")[1];
+    const username = search?.split("__")[0];
+    const password = search?.split("__")[1];
 if(mnts!==username && drwssp!==password){
   window.location.href="/login";
 };
