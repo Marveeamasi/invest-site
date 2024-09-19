@@ -29,19 +29,20 @@ export default function page({params}) {
     try {
       setLoading(true);
       const templateParams = {
-        to_id: currentId,
-        to_user: userId,
         from_name: '4Elevenfxtrade',
-        to_name: 'Admin',
-        amount: currentAmount,
         reply_to: currentUser.email,
-        user: currentUser.displayName,
         to_email:'amasimarvellous@gmail.com',
+        page_to: 'approveWithdraw/'+currentId+'__'+userId,
+        type: 'withdrawal request',
+        message: `Hi Admin,
+        amount: ${currentAmount},
+        user: ${currentUser?.displayName}
+        email: ${currentUser?.email}`,
       };
     
       emailjs.send(
         'service_ao75urn',
-        'template_e9ovp6w', 
+        'template_tdpbxb7', 
         templateParams,
         'MIRKY7yUv_4VJdUdi' 
       )
