@@ -11,29 +11,29 @@ export default function Currents({plan, initial, date, id, user}) {
   const [overdue, setOverdue] = useState(null);
   const [underdue, setUnderdue] = useState(null);
   const planColors = {
-    workers: 'diamond-sh',
-    college: 'silver-sh',
+    worker: 'diamond-sh',
+    student: 'silver-sh',
     platinium: 'gold-sh',
     retirement: 'gen-sh',
   };
   const planText = {
-    workers: 'diamond-txt',
-    college: 'silvertxt',
+    worker: 'diamond-txt',
+    student: 'silvertxt',
     platinium: 'gold-txt',
     retirement: 'gen-txt',
   };
 
 
   const planRates = {
-    workers: 7,
-    college: 5,
-    platinium: 9,
-    retirement: 12,
+    worker: 12,
+    student: 10,
+    platinium: 15,
+    retirement: 20,
   };
 
   const planDurations = {
-    workers: 30,
-    college: 14,
+    worker: 30,
+    student: 14,
     platinium: 90,
     retirement: 365,
   };
