@@ -12,11 +12,11 @@ export default function Plans() {
       </div>
       <div className='grid sm:grid-cols-2 grid-cols-1 gap-10 xl:grid-cols-3 2xl:grid-cols-4'>
         <div className='flex flex-col shadow-glow-mild rounded-lg w-full h-[500px] justify-center items-center gap-5 p-4'>
-           <div className='text-2xl font-bold text-center w-full'>College Plan</div>
-           <div className='text-3xl font-bold text-center w-full text-col '>5% Weekly ROI</div>
+           <div className='text-2xl font-bold text-center w-full'>Student Plan</div>
+           <div className='text-3xl font-bold text-center w-full text-col '>10% Weekly ROI</div>
            <div className='flex gap-2 items-center  w-full'>
             <TiTickOutline className='text-[#00eaff]'/>
-            <div className=''>Minimum Deposit - $200</div>
+            <div className=''>Minimum Deposit - $100</div>
            </div>
            <div className='flex gap-2 items-center  w-full'>
             <TiTick className='text-[#00eaff]'/>
@@ -28,7 +28,7 @@ export default function Plans() {
         </div>
         <div className='flex flex-col bg-col rounded-lg w-full h-[500px] justify-center items-center gap-5 p-4 opacity-[.9]'>
            <div className='text-2xl font-bold text-center w-full text-[#000]'>Retirement Plan</div>
-           <div className='text-3xl font-bold text-center w-full text-[#ffffffef]'>12% Weekly ROI</div>
+           <div className='text-3xl font-bold text-center w-full text-[#ffffffef]'>20% Weekly ROI</div>
            <div className='flex gap-2 items-center  w-full'>
             <TiTickOutline className='text-[#000000]'/>
             <div className='text-black font-bold'>Minimum Deposit - $300,000</div>
@@ -43,7 +43,7 @@ export default function Plans() {
         </div>
         <div className='flex flex-col shadow-glow-mild rounded-lg w-full h-[500px] justify-center items-center gap-5 p-4'>
            <div className='text-2xl font-bold text-center w-full'>Platinium Plan</div>
-           <div className='text-3xl font-bold text-center w-full text-col '>9% Weekly ROI</div>
+           <div className='text-3xl font-bold text-center w-full text-col '>15% Weekly ROI</div>
            <div className='flex gap-2 items-center  w-full'>
             <TiTickOutline className='text-[#00eaff]'/>
             <div className=''>Minimum Deposit - $50,000</div>
@@ -57,8 +57,8 @@ export default function Plans() {
    
         </div>
         <div className='flex flex-col shadow-glow-mild rounded-lg w-full h-[500px] justify-center items-center gap-5 p-4'>
-           <div className='text-2xl font-bold text-center w-full'>Workers Plan</div>
-           <div className='text-3xl font-bold text-center w-full text-col '>7% Weekly ROI</div>
+           <div className='text-2xl font-bold text-center w-full'>Worker Plan</div>
+           <div className='text-3xl font-bold text-center w-full text-col '>12% Weekly ROI</div>
            <div className='flex gap-2 items-center  w-full'>
             <TiTickOutline className='text-[#00eaff]'/>
             <div className=''>Minimum Deposit - $2,000</div>
