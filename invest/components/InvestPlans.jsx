@@ -10,23 +10,23 @@ export default function InvestPlans() {
         <h1 className='text-3xl'>Select a plan to invest</h1>
     <div className='grid sm:grid-cols-2 grid-cols-1 gap-10 xl:grid-cols-3 2xl:grid-cols-4'>
       <div className='flex flex-col shadow-glow-mild rounded-lg w-full h-[500px] justify-center items-center gap-5 p-4'>
-         <div className='text-2xl font-bold text-center w-full'>College Plan</div>
-         <div className='text-3xl font-bold text-center w-full text-col '>5% Weekly ROI</div>
+         <div className='text-2xl font-bold text-center w-full'>Student Plan</div>
+         <div className='text-3xl font-bold text-center w-full text-col '>10% Weekly ROI</div>
          <div className='flex gap-2 items-center  w-full'>
           <TiTickOutline className='text-[#00eaff]'/>
-          <div className=''>Minimum Deposit - $200</div>
+          <div className=''>Minimum Deposit - $100</div>
          </div>
          <div className='flex gap-2 items-center w-full'>
           <TiTick className='text-[#00eaff]'/>
           <div className=''>Maximum Deposit - $2000</div>
          </div>
          <p className='text-center w-full text-[#a2a1ab]'>Duration of 2 weeks</p>
-         <Link href='payment/college' className=' flex justify-center items-center w-40 h-10 rounded-lg bg-col hover:opacity-75 text-black text-sm font-bold'>Invest</Link>
+         <Link href='payment/student' className=' flex justify-center items-center w-40 h-10 rounded-lg bg-col hover:opacity-75 text-black text-sm font-bold'>Invest</Link>
  
       </div>
       <div className='flex flex-col bg-col rounded-lg w-full h-[500px] justify-center items-center gap-5 p-4 opacity-[.9]'>
          <div className='text-2xl font-bold text-center w-full text-[#000]'>Retirement Plan</div>
-         <div className='text-3xl font-bold text-center w-full text-[#ffffffef]'>12% Weekly ROI</div>
+         <div className='text-3xl font-bold text-center w-full text-[#ffffffef]'>20% Weekly ROI</div>
          <div className='flex gap-2 items-center w-full'>
           <TiTickOutline className='text-[#000000]'/>
           <div className='text-black font-bold'>Minimum Deposit - $300,000</div>
@@ -41,7 +41,7 @@ export default function InvestPlans() {
       </div>
       <div className='flex flex-col shadow-glow-mild rounded-lg w-full h-[500px] justify-center items-center gap-5 p-4'>
          <div className='text-2xl font-bold text-center w-full'>Platinium Plan</div>
-         <div className='text-3xl font-bold text-center w-full text-col '>9% Weekly ROI</div>
+         <div className='text-3xl font-bold text-center w-full text-col '>15% Weekly ROI</div>
          <div className='flex gap-2 items-center  w-full'>
           <TiTickOutline className='text-[#00eaff]'/>
           <div className=''>Minimum Deposit - $50,000</div>
@@ -55,8 +55,8 @@ export default function InvestPlans() {
  
       </div>
       <div className='flex flex-col shadow-glow-mild rounded-lg w-full h-[500px] justify-center items-center gap-5 p-4'>
-         <div className='text-2xl font-bold text-center w-full'>Workers Plan</div>
-         <div className='text-3xl font-bold text-center w-full text-col '>7% Weekly ROI</div>
+         <div className='text-2xl font-bold text-center w-full'>Worker Plan</div>
+         <div className='text-3xl font-bold text-center w-full text-col '>12% Weekly ROI</div>
          <div className='flex gap-2 items-center  w-full'>
           <TiTickOutline className='text-[#00eaff]'/>
           <div className=''>Minimum Deposit - $2,000</div>
@@ -66,7 +66,7 @@ export default function InvestPlans() {
           <div className=''>Maximum Deposit - $50,000</div>
          </div>
          <p className='text-center w-full text-[#a2a1ab]'>Duration of 1 month</p>
-         <Link href='payment/workers' className=' flex justify-center items-center w-40 h-10 rounded-lg bg-col hover:opacity-75 text-black text-sm font-bold'>Invest</Link>
+         <Link href='payment/worker' className=' flex justify-center items-center w-40 h-10 rounded-lg bg-col hover:opacity-75 text-black text-sm font-bold'>Invest</Link>
  
       </div>
     </div>
