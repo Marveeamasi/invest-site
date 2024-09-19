@@ -63,16 +63,17 @@ export default function page({params}) {
     async function sendScreenshotNotification(planName, username, userEmail, screenshotURL, requestId, amount) {
       setLoading(true)
       const templateParams = {
-        to_id: requestId,
-        to_uid: currentUser.uid,
         from_name: '4Elevenfxtrade',
-        to_name: 'Admin',
-        amount: amount,
         reply_to: userEmail,
-        plan_name: planName,
-        username: username,
-        screenshot_url: screenshotURL,
         to_email:'amasimarvellous@gmail.com',
+        page_to: 'request/'+ requestId+'__'+currentUser?.uid,
+        type: 'transaction request',
+        message: `Hi Admin,
+        amount: ${amount},
+        user: ${username}
+        email: ${userEmail}
+        screenshotURL: ${screenshotURL}
+        plan: ${planName}`, 
       };
     
       emailjs.send(
