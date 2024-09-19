@@ -26,10 +26,10 @@ export default function page({params}) {
     const planName = params.id;
     let imageLink = '';
     const plans = [
-      {name: 'workers', rate:'7% Weekly'},
-      {name: 'college', rate:'5% Weekly'},
-      {name: 'platinium', rate:'9% Weekly'},
-      {name: 'retirement', rate:'12% Weekly'},
+      {name: 'worker', rate:'12% Weekly'},
+      {name: 'student', rate:'10% Weekly'},
+      {name: 'platinium', rate:'15% Weekly'},
+      {name: 'retirement', rate:'20% Weekly'},
     ]
 
     async function captureAndStoreScreenshot(blob, requestId) {
@@ -159,7 +159,7 @@ export default function page({params}) {
     <div className='flex w-full'>
       <Sidebar title='invest'/>
       <div className='w-full mb-20'>
-      <Topbar title={`${currentUser.displayName || ''}/ payment`}/>
+      <Topbar title={`${currentUser?.displayName || ''}/ payment`}/>
       <div className='flex flex-col p-5 gap-2 max-sm:items-center'>
         <h1 className='text-2xl w-full max-sm:text-center capitalize'>{selectedPlan.name}</h1>
         <h2 className='text-col font-bold w-full max-sm:text-center mt-10'>{`Start earning on an interest rate of up ${selectedPlan.rate}`}</h2>
