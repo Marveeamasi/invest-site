@@ -28,15 +28,15 @@ export default function page() {
   const [totalInitial, setTotalInitial] = useState(0);
   const [totalCurrentAmount, setTotalCurrentAmount] = useState(0);
   const planRates = {
-    workers: 7,
-    college: 5,
-    platinium: 9,
-    retirement: 12,
+    worker: 12,
+    student: 10,
+    platinium: 15,
+    retirement: 20,
   };
 
   const planDurations = {
-    workers: 30,
-    college: 14,
+    worker: 30,
+    student: 14,
     platinium: 90,
     retirement: 365,
   };
@@ -186,7 +186,7 @@ export default function page() {
     <div className='flex w-full'>
       <Sidebar title={'dashboard'}/>
       <div className='w-full'>
-      <Topbar title={`${currentUser.displayName || ''}/ dashboard`}/>
+      <Topbar title={`${currentUser?.displayName || ''}/ dashboard`}/>
       <div className='grid sm:grid-cols-3 grid-cols-1 gap-5 px-5'>
         <DashboardCard title='Total investment' link={`/invest`} Icon={RiHandCoinFill} sign='$' amount={totalInitial}/>
         <DashboardCard title='Total earning' link={`/currents`} Icon={GiReceiveMoney} sign='$' amount={totalCurrentAmount}/>
