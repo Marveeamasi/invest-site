@@ -11,7 +11,9 @@ export default function WithdrawHistory() {
     const [withdrawal, setWithdrawal] = useState([]);
     const {currentUser} = useContext(AuthContext) 
     useEffect(() => {
-      const unsubscribe = onSnapshot(
+      const runFetch=async()=>{
+        try{
+      onSnapshot(
         doc(db, 'userWithdrawals', currentUser?.uid),
         (docSnapshot) => {
           if (docSnapshot?.exists) {
@@ -25,9 +27,13 @@ export default function WithdrawHistory() {
           console.error("Error fetching withdrawals data:", error);
         }
       );
-    
-      return () => unsubscribe();
-    }, [currentUser.uid]);
+    }catch(err){
+      console.log(err)
+    }
+  };
+  
+      return () => runFetch();
+    }, [currentUser?.uid]);
 
 
     const { currentPage, slicedData, totalPages, handlePageChange } = usePagination(withdrawal);
