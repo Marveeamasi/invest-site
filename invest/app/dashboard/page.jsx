@@ -42,7 +42,9 @@ export default function page() {
   };
 
   useEffect(() => { 
-    const unsubscribeTransactions = onSnapshot(
+    const runFetch = async() =>{
+   try{ 
+     onSnapshot(
       doc(db, 'userTransactions', currentUser?.uid),
       (docSnapshot) => {
         if (docSnapshot?.exists) {
@@ -55,9 +57,12 @@ export default function page() {
       (error) => {
         console.error("Error fetching transactions data:", error);
       }
-    );
+    );}catch(err){
+      console.log(err)
+    }
 
-    const unsubscribeCurrents = onSnapshot(
+    try{
+       onSnapshot(
       doc(db, 'userCurrents', currentUser?.uid),
       (docSnapshot) => {
         if (docSnapshot?.exists) {
@@ -115,15 +120,13 @@ export default function page() {
       (error) => {
         console.error("Error fetching currents data:", error);
       }
-    );
+    );}catch(err){
+      console.log(err)
+    }
+  }
   
-    return async() => {
-     try{
-       unsubscribeTransactions();
-       unsubscribeCurrents();
-      }catch(err){
-        console.log(err)
-      }
+    return () => {
+      runFetch();
     };
   }, [currentUser.uid]);
 
